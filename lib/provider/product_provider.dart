@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test_myeg/model/ProductListModel.dart';
 
-import 'api.dart';
+import '../api.dart';
 
 class ProductProvider with ChangeNotifier {
   final ProductService _service = ProductService();
