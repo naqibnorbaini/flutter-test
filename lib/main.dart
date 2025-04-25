@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_test_myeg/productList.dart';
-import 'package:flutter_test_myeg/product_provider.dart';
+import 'package:flutter_test_myeg/provider/productDetails_provider.dart';
+import 'package:flutter_test_myeg/screens/productList.dart';
+import 'package:flutter_test_myeg/provider/product_provider.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -8,6 +9,8 @@ void main() {
       MultiProvider(
         providers: [
           ChangeNotifierProvider(create: (_) => ProductProvider()..fetchProducts()),
+          ChangeNotifierProvider(create: (_) => ProductDetailProvider()),
+
         ],
         child: MyApp(),
       ));
